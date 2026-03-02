@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>P2W App - Create Permit</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1F1C2C, #928DAB);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* center container vertically */
+            align-items: center;
+            position: relative;
+            margin: 0;
+        }
+
+        body::before {
+            content: 'CREATE PERMIT';
+            position: fixed;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 120px;
+            font-weight: bold;
+            color: rgba(135, 206, 250, 0.15);
+            text-shadow: 0 0 30px rgba(135, 206, 250, 0.2);
+            z-index: 0;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        .navbar {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 40px;
+            color: #FFFFFF;
+            width: 100%;
+        }
+
+        .container {
+            background: #2C2A3A;
+            padding: 30px;
+            width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
+            color: #fff;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .container input,
+        .container select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            background: #3B3950;
+            color: #FFFFFF;
+            border: 1px solid #3B3950;
+            border-radius: 4px;
+        }
+
+        .form-buttons .primary-btn {
+            background: #6C5CE7;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-buttons .secondary-btn {
+            background: #5A4BD6;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <h2>P2W App</h2>
+        <button class="logout-btn">Logout</button>
+    </div>
+
+    <div class="container">
+        <h3>CREATE NEW PERMIT</h3>
+        <hr>
+
+        <form>
+
+            <label>Job Description</label>
+            <input type="text" required>
+
+            <label>Location</label>
+            <input type="text" required>
+
+            <label>Permit Type</label>
+            <select required>
+                <option>Hot Work</option>
+                <option>Electrical</option>
+                <option>Confined Space</option>
+            </select>
+
+            <label>Assigned To</label>
+            <input type="text" required>
+
+            <label>Status</label>
+            <select required>
+                <option>Active</option>
+                <option>Closed</option>
+            </select>
+
+            <div class="form-buttons">
+                <button type="reset" class="secondary-btn">Cancel</button>
+                <button type="submit" class="primary-btn">Submit Permit</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
